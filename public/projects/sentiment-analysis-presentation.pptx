@@ -1,0 +1,50 @@
+Social Media Sentiment Analysis - Presentation
+
+This is a placeholder for the actual PowerPoint presentation.
+
+Slide 1: Title
+- Social Media Sentiment Analysis
+- NLP & Deep Learning Project
+- Die (Laura) Chen
+
+Slide 2: Motivation
+- Understanding public opinion
+- Real-time sentiment monitoring
+- Business intelligence applications
+
+Slide 3: Data Collection
+- 100,000+ tweets collected
+- Twitter API integration
+- Data preprocessing pipeline
+
+Slide 4: NLP Techniques
+- Text cleaning and tokenization
+- TF-IDF feature extraction
+- Word embeddings
+- Sentiment labeling
+
+Slide 5: Deep Learning Models
+- Neural network architecture
+- LSTM for sequence processing
+- Model training and optimization
+- Cross-validation results
+
+Slide 6: Results & Insights
+- 92% classification accuracy
+- Sentiment trend analysis
+- Topic modeling results
+- Real-time dashboard
+
+Slide 7: Applications
+- Brand monitoring
+- Market research
+- Public opinion tracking
+- Social media strategy
+
+Slide 8: Future Work
+- Multi-language support
+- Real-time streaming
+- Advanced visualization
+- Model deployment
+
+Note: This is a sample file. Replace with actual PowerPoint content. 

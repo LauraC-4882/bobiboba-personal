@@ -1,0 +1,23 @@
+NYC Housing Price Prediction Model - Project Report
+
+This is a placeholder for the actual PDF document.
+
+Project Overview:
+- Analyzed 50,000+ NYC property records
+- Implemented multiple regression techniques
+- Achieved 95% prediction accuracy
+- Used Python, Scikit-learn, Pandas, and Matplotlib
+
+Key Findings:
+- Location is the primary factor affecting housing prices
+- Property size and amenities significantly impact value
+- Market trends show seasonal variations
+
+Technologies Used:
+- Python for data processing
+- Scikit-learn for machine learning models
+- Pandas for data manipulation
+- Matplotlib for visualization
+- Jupyter Notebooks for analysis
+
+Note: This is a sample file. Replace with actual PDF content. 
