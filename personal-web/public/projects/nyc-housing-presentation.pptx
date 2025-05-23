@@ -1,0 +1,36 @@
+NYC Housing Price Prediction Model - Presentation
+
+This is a placeholder for the actual PowerPoint presentation.
+
+Slide 1: Title
+- NYC Housing Price Prediction Model
+- Data Science Project
+- Die (Laura) Chen
+
+Slide 2: Problem Statement
+- Predict housing prices in NYC
+- Help buyers and sellers make informed decisions
+- Identify key factors affecting property values
+
+Slide 3: Data Collection
+- 50,000+ property records
+- Multiple data sources
+- Data cleaning and preprocessing
+
+Slide 4: Methodology
+- Linear Regression
+- Random Forest
+- Feature Engineering
+- Cross-validation
+
+Slide 5: Results
+- 95% prediction accuracy
+- Key insights on price factors
+- Model validation
+
+Slide 6: Conclusions
+- Location is primary factor
+- Model ready for deployment
+- Future improvements
+
+Note: This is a sample file. Replace with actual PowerPoint content. 
