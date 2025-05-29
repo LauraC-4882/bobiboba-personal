@@ -19,44 +19,44 @@ export default function Projects() {
     }
   ];
 
-  // const dsProjects = [
-  //   {
-  //     id: 1,
-  //     title: '',
-  //     type: 'Data Science',
-  //     description: '',
-  //     technologies: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Jupyter'],
-  //     pdf: '/projects/nyc-housing-analysis.pdf',
-  //     ppt: '/projects/nyc-housing-presentation.pptx',
-  //     icon: <Database className="w-8 h-8" />,
-  //     color: 'cyber-blue',
-  //     insights: ['Linear Regression', 'Feature Engineering', 'Data Visualization']
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Social Media Sentiment Analysis',
-  //     type: 'Data Science',
-  //     description: 'Natural Language Processing project analyzing sentiment trends across social media platforms. Processed 100K+ tweets with sentiment classification.',
-  //     technologies: ['Python', 'NLTK', 'TensorFlow', 'Pandas', 'Seaborn'],
-  //     pdf: '/projects/sentiment-analysis.pdf',
-  //     ppt: '/projects/sentiment-analysis-presentation.pptx',
-  //     icon: <Brain className="w-8 h-8" />,
-  //     color: 'cyber-green',
-  //     insights: ['NLP', 'Text Processing', 'Deep Learning']
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'E-commerce Sales Forecasting',
-  //     type: 'Data Science',
-  //     description: 'Time series analysis for e-commerce sales prediction using ARIMA and LSTM models. Achieved 88% forecast accuracy for quarterly sales.',
-  //     technologies: ['Python', 'Pandas', 'TensorFlow', 'Statsmodels', 'Plotly'],
-  //     pdf: '/projects/sales-forecasting.pdf',
-  //     ppt: '/projects/sales-forecasting-presentation.pptx',
-  //     icon: <BarChart className="w-8 h-8" />,
-  //     color: 'cyber-orange',
-  //     insights: ['Time Series', 'LSTM Networks', 'Business Intelligence']
-  //   }
-  // ];
+  const dsProjects = [
+    {
+      id: 1,
+      title: '',
+      type: 'Data Science',
+      description: '',
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Jupyter'],
+      pdf: '/projects/nyc-housing-analysis.pdf',
+      ppt: '/projects/nyc-housing-presentation.pptx',
+      icon: <Database className="w-8 h-8" />,
+      color: 'cyber-blue',
+      insights: ['Linear Regression', 'Feature Engineering', 'Data Visualization']
+    },
+    // {
+    //   id: 2,
+    //   title: 'Social Media Sentiment Analysis',
+    //   type: 'Data Science',
+    //   description: 'Natural Language Processing project analyzing sentiment trends across social media platforms. Processed 100K+ tweets with sentiment classification.',
+    //   technologies: ['Python', 'NLTK', 'TensorFlow', 'Pandas', 'Seaborn'],
+    //   pdf: '/projects/sentiment-analysis.pdf',
+    //   ppt: '/projects/sentiment-analysis-presentation.pptx',
+    //   icon: <Brain className="w-8 h-8" />,
+    //   color: 'cyber-green',
+    //   insights: ['NLP', 'Text Processing', 'Deep Learning']
+    // },
+    // {
+    //   id: 3,
+    //   title: 'E-commerce Sales Forecasting',
+    //   type: 'Data Science',
+    //   description: 'Time series analysis for e-commerce sales prediction using ARIMA and LSTM models. Achieved 88% forecast accuracy for quarterly sales.',
+    //   technologies: ['Python', 'Pandas', 'TensorFlow', 'Statsmodels', 'Plotly'],
+    //   pdf: '/projects/sales-forecasting.pdf',
+    //   ppt: '/projects/sales-forecasting-presentation.pptx',
+    //   icon: <BarChart className="w-8 h-8" />,
+    //   color: 'cyber-orange',
+    //   insights: ['Time Series', 'LSTM Networks', 'Business Intelligence']
+    // }
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
