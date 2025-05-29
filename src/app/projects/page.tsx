@@ -300,7 +300,7 @@ export default function Projects() {
                   INTERESTED IN COLLABORATING?
                 </h3>
                 <p className="text-gray-300 font-body mb-6">
-                  Let's build something amazing together. I'm always open to new opportunities and challenges.
+                  Let&apos;s build something amazing together. I&apos;m always open to new opportunities and challenges.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link

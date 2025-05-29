@@ -1,10 +1,15 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const CyberBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -108,6 +113,26 @@ const CyberBackground = () => {
     };
   }, []);
 
+  // Generate consistent random positions for shapes only on client
+  const getRandomPosition = (index: number) => {
+    if (!isClient) return { x: 0, y: 0 };
+    // Use a seed based on index to make it deterministic during the session
+    const seed = index * 123.456;
+    return {
+      x: (Math.sin(seed) * 0.5 + 0.5) * window.innerWidth,
+      y: (Math.cos(seed) * 0.5 + 0.5) * window.innerHeight
+    };
+  };
+
+  const getRandomAnimationTarget = (index: number) => {
+    if (!isClient) return { x: 0, y: 0 };
+    const seed = index * 789.012;
+    return {
+      x: (Math.sin(seed + 1) * 0.5 + 0.5) * window.innerWidth,
+      y: (Math.cos(seed + 1) * 0.5 + 0.5) * window.innerHeight
+    };
+  };
+
   return (
     <>
       <canvas
@@ -118,52 +143,62 @@ const CyberBackground = () => {
       
       {/* Animated geometric shapes */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute border border-cyber-pink/20 w-32 h-32"
-            initial={{ 
-              x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0, 
-              y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,
-              rotate: 0 
-            }}
-            animate={{
-              x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0,
-              y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,
-              rotate: 360,
-            }}
-            transition={{
-              duration: 20 + i * 5,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            style={{
-              clipPath: i % 2 === 0 ? 'polygon(50% 0%, 0% 100%, 100% 100%)' : 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'
-            }}
-          />
-        ))}
+        {isClient && [...Array(6)].map((_, i) => {
+          const initialPos = getRandomPosition(i);
+          const animatePos = getRandomAnimationTarget(i);
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute border border-cyber-pink/20 w-32 h-32"
+              initial={{ 
+                x: initialPos.x, 
+                y: initialPos.y,
+                rotate: 0 
+              }}
+              animate={{
+                x: animatePos.x,
+                y: animatePos.y,
+                rotate: 360,
+              }}
+              transition={{
+                duration: 20 + i * 5,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              style={{
+                clipPath: i % 2 === 0 ? 'polygon(50% 0%, 0% 100%, 100% 100%)' : 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'
+              }}
+            />
+          );
+        })}
 
-        {[...Array(4)].map((_, i) => (
-          <motion.div
-            key={`circle-${i}`}
-            className="absolute border border-cyber-blue/20 w-24 h-24 rounded-full"
-            initial={{ 
-              x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0, 
-              y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,
-              scale: 0.5
-            }}
-            animate={{
-              x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0,
-              y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,
-              scale: [0.5, 1.5, 0.5],
-            }}
-            transition={{
-              duration: 15 + i * 3,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
+        {isClient && [...Array(4)].map((_, i) => {
+          const initialPos = getRandomPosition(i + 6);
+          const animatePos = getRandomAnimationTarget(i + 6);
+          
+          return (
+            <motion.div
+              key={`circle-${i}`}
+              className="absolute border border-cyber-blue/20 w-24 h-24 rounded-full"
+              initial={{ 
+                x: initialPos.x, 
+                y: initialPos.y,
+                scale: 0.5
+              }}
+              animate={{
+                x: animatePos.x,
+                y: animatePos.y,
+                scale: [0.5, 1.5, 0.5],
+              }}
+              transition={{
+                duration: 15 + i * 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          );
+        })}
       </div>
     </>
   );

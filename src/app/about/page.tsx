@@ -110,7 +110,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-gray-300 font-body">
                 <p>
-                  I'm <span className="text-cyber-pink font-bold">Die (Laura) Chen</span>, 
+                  I&apos;m <span className="text-cyber-pink font-bold">Die (Laura) Chen</span>, 
                   a Computer Science and Data Science student at New York University with a minor 
                   in Web Development and Applications.
                 </p>
@@ -122,7 +122,7 @@ export default function About() {
                   that drive meaningful change.
                 </p>
                 <p>
-                  When I'm not coding, you can find me exploring the latest tech trends, 
+                  When I&apos;m not coding, you can find me exploring the latest tech trends, 
                   contributing to open-source projects, or experimenting with new frameworks 
                   and technologies.
                 </p>
@@ -174,7 +174,7 @@ export default function About() {
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <motion.div
                 key={skill.category}
                 variants={itemVariants}
@@ -263,7 +263,7 @@ export default function About() {
             <div className="cyber-gradient p-[2px] rounded-lg">
               <div className="bg-dark-bg px-12 py-8 rounded-lg">
                 <h3 className="text-2xl font-cyber text-white mb-4">
-                  LET'S BUILD THE FUTURE TOGETHER
+                  LET&apos;S BUILD THE FUTURE TOGETHER
                 </h3>
                 <p className="text-gray-300 font-body mb-6">
                   Ready to collaborate on innovative projects and push the boundaries of technology.
