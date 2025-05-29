@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Download, FileText, Presentation, Code, Database, Brain, BarChart } from 'lucide-react';
+import { ExternalLink, Download, FileText, Presentation, Code, Database } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Projects() {
